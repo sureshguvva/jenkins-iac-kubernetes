@@ -17,6 +17,7 @@ sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 sudo yum upgrade -y
 sudo yum install jenkins -y
 sudo systemctl start jenkins
+sudo ufw allow 8080
 
 echo "Install git"
 yum install -y git
