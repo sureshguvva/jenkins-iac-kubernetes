@@ -39,7 +39,7 @@ module "eks" {
       max_size     = 1
       desired_size = 1
 
-      instance_types = ["t3.large"]
+      instance_types = ["t3.medium"]
       capacity_type  = "SPOT"
       subnet         = "subnet-0a6e7183b4dccda71"
       labels = {
