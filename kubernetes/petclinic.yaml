@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: petclinic1
-        image: kalashpalwanda/demo:latest
+        image: anuj730/jpipeline_demo:angular-build-4502
         ports:
         - containerPort: 8080
         imagePullPolicy: Always
