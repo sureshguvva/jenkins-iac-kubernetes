@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: petclinic1
+  name: petclinic
 spec:
   selector:
     matchLabels:
-      app: petclinic1
+      app: petclinic
   replicas: 1 
   template: 
     metadata:
       labels:
-        app: petclinic1
+        app: petclinic
     spec:
       containers:
-      - name: petclinic1
-        image: anuj730/jpipeline_demo:angular-build-4502
+      - name: petclinic
+        image: kalashpalwanda/demo:latest
         ports:
         - containerPort: 8080
         imagePullPolicy: Always
@@ -22,11 +22,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: petclinic1
+  name: petclinic
 spec:
   type: LoadBalancer
   selector:
-    app: petclinic1
+    app: petclinic
   ports:
   - name: http
     protocol: TCP
