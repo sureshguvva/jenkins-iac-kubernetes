@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: petclinic
+  name: petclinic1
 spec:
   selector:
     matchLabels:
-      app: petclinic
+      app: petclinic1
   replicas: 1 
   template: 
     metadata:
       labels:
-        app: petclinic
+        app: petclinic1
     spec:
       containers:
-      - name: petclinic
+      - name: petclinic1
         image: kalashpalwanda/demo:latest
         ports:
         - containerPort: 8080
@@ -22,11 +22,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: petclinic
+  name: petclinic1
 spec:
   type: LoadBalancer
   selector:
-    app: petclinic
+    app: petclinic1
   ports:
   - name: http
     protocol: TCP
