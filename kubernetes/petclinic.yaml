@@ -24,7 +24,7 @@ kind: Service
 metadata:
   name: petclinic
 spec:
-  type: loadbalancer
+  type: LoadBalancer
   selector:
     app: petclinic
   ports:
