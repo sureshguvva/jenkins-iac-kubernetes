@@ -17,3 +17,6 @@ _site/
 terraform/.terraform/*
 terraform/terraform.tfstate.backup
 terraform/terraform.tfstate
+creds/*
+.terraform/*
+terraform.*
