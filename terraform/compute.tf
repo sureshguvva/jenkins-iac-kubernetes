@@ -30,7 +30,7 @@ data "aws_ami" "amazon-linux-2" {
 module "eks" {
   source = "terraform-aws-modules/eks/aws"
 
-  cluster_name                    = "my-cluster-demo"
+  cluster_name                    = "my-demo1"
   cluster_version                 = "1.21"
   cluster_endpoint_private_access = true
   cluster_endpoint_public_access  = true
