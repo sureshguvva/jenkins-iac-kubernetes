@@ -4,6 +4,11 @@ pipeline {
         pollSCM "* * * * *"
        }
     stages {
+        stage('Git SCM') {
+            steps {
+                git 'https://github.com/arjundevop/terraform-iac.git'
+            }
+        }
         stage('Build Application') { 
             steps {
                 echo '=== Building Petclinic Application ==='
