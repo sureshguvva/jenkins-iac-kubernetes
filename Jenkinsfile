@@ -1,12 +1,12 @@
 pipeline {
-    agent any
+    agent any {label 'slave-1'}
        triggers {
         pollSCM "* * * * *"
        }
     stages {
         stage('Git SCM') {
             steps {
-                git 'https://github.com/arjundevop/terraform-iac.git'
+                git 'https://github.com/sureshguvva/jenkins-iac-kubernetes.git'
             }
         }
         stage('Build Application') { 
