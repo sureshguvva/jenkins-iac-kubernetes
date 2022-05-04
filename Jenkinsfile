@@ -1,12 +1,12 @@
 pipeline {
-    agent any {label 'slave-1'}
+    agent any {label 'slave'}
        triggers {
         pollSCM "* * * * *"
        }
     stages {
         stage('Git SCM') {
             steps {
-                git 'https://github.com/sureshguvva/jenkins-iac-kubernetes.git'
+                git 'https://github.com/sureshguvva/pets.git'
             }
         }
         stage('Build Application') { 
@@ -33,7 +33,7 @@ pipeline {
             steps {
                 echo '=== Building Petclinic Docker Image ==='
                 script {
-                    app = docker.build("yellaiah225/demo")
+                    app = docker.build("sureshguvva/pets")
                 }
             }
         }
